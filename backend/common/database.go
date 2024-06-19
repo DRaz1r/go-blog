@@ -25,7 +25,7 @@ func InitDB() *gorm.DB {
 	host := "localhost"
 	port := "3306"
 	database := "blog"
-	charset := "utf8"
+	charset := "utf8mb4"
 	loc := "Asia/Shanghai"
 	args := fmt.Sprintf("%s:%s@(%s:%s)/%s?charset=%s&parseTime=true&loc=%s",
 		user,

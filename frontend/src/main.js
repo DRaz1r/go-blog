@@ -23,6 +23,13 @@ app.provide("serverUrl", axios.defaults.baseURL)
 app.use(naive); // 引入ui框架
 app.use(createPinia()); // 引入pinia
 
+const userStore = UserStore()
+// 拦截器传token
+axios.interceptors.request.use((config) => {
+    config.headers.authorization = `Bearer ${userStore.token}`
+    return config
+})
+
 app.use(router); // 引入路由
 
 app.mount('#app')
