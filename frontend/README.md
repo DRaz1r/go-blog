@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# 简介 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3 + Vite
 
-## Recommended IDE Setup
+## 依赖
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+* [axios](https://www.axios-http.cn/): 基于 promise 的网络请求库，用于http请求
+* [pinia](https://pinia.vuejs.org/zh/): 符合直觉的 Vue.js 状态管理库，允许您跨组件、页面共享状态
+* [sass](https://sass.bootcss.com/index.html): 专业级 CSS 扩展语言，提供许多便利写法
+* [vue-router](https://router.vuejs.org/zh/): vue官方路由
+* [naive-ui](https://www.naiveui.com/zh-CN/light): 一个 Vue 3 组件库
+* [wangeditor](https://www.wangeditor.com/): 开源 Web 富文本编辑器，开箱即用，配置简单
