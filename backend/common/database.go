@@ -10,6 +10,7 @@ package common
 import (
 	"backend/model"
 	"fmt"
+	"net/url"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
@@ -20,18 +21,21 @@ var DB *gorm.DB
 func InitDB() *gorm.DB {
 	driverName := "mysql"
 	user := "root"
-	password := "12345678"
+	password := "123456"
 	host := "localhost"
 	port := "3306"
 	database := "blog"
 	charset := "utf8"
-	args := fmt.Sprintf("%s:%s@(%s:%s)/%s?charset=%s&parseTime=true",
+	loc := "Asia/Shanghai"
+	args := fmt.Sprintf("%s:%s@(%s:%s)/%s?charset=%s&parseTime=true&loc=%s",
 		user,
 		password,
 		host,
 		port,
 		database,
-		charset)
+		charset,
+		// url.QueryEscape 对字符串进行转义，使其可以安全地用在 URL 中
+		url.QueryEscape(loc))
 	// 连接数据库
 	db, err := gorm.Open(driverName, args)
 	if err != nil {
