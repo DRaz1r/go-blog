@@ -1,11 +1,11 @@
 /*
 *
-@author: Fuhang Li
+@author: Azir
 @desc:
 @date: 6/19/24
 *
 */
-package vo
+package dto
 
 type CreateArticleRequest struct {
 	// 加上binging用于表单验证

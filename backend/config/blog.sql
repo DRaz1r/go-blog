@@ -44,7 +44,7 @@ INSERT INTO `articles` VALUES ('e56767dd-6f19-4cce-8a2b-86c4bd8d5728', 1, 2, 'ä¸
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories`  (
   `id` int UNSIGNED NOT NULL,
-  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `category_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 

@@ -21,7 +21,7 @@ var DB *gorm.DB
 func InitDB() *gorm.DB {
 	driverName := "mysql"
 	user := "root"
-	password := "123456"
+	password := "12345678"
 	host := "localhost"
 	port := "3306"
 	database := "blog"

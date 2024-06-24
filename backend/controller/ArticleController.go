@@ -9,13 +9,14 @@ package controller
 
 import (
 	"backend/common"
+	"backend/dto"
 	"backend/model"
 	"backend/response"
-	"backend/vo"
-	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 	"strconv"
 	"strings"
+
+	"github.com/gin-gonic/gin"
+	"github.com/jinzhu/gorm"
 )
 
 type ArticleController struct {
@@ -31,7 +32,7 @@ type IArticleController interface {
 }
 
 func (a ArticleController) Create(c *gin.Context) {
-	var articleRequest vo.CreateArticleRequest
+	var articleRequest dto.CreateArticleRequest
 	// 数据验证
 	if err := c.ShouldBindJSON(&articleRequest); err != nil {
 		response.Fail(c, nil, "数据错误")
@@ -55,7 +56,7 @@ func (a ArticleController) Create(c *gin.Context) {
 }
 
 func (a ArticleController) Update(c *gin.Context) {
-	var articleRequest vo.CreateArticleRequest
+	var articleRequest dto.CreateArticleRequest
 	// 数据验证
 	if err := c.ShouldBindJSON(&articleRequest); err != nil {
 		response.Fail(c, nil, "数据错误")
